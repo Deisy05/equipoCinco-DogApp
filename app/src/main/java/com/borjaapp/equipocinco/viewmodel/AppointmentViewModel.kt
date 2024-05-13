@@ -1,5 +1,7 @@
 package com.borjaapp.equipocinco.viewmodel
 
+import android.app.Application
+import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -13,16 +15,13 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.launch
 
 
-class AppointmentViewModel (
-    private val appointmentAppointment: AppointmentRepository
-) : ViewModel() {
+class AppointmentViewModel (application: Application) : AndroidViewModel(application){
+    val context = getApplication<Application>()
+    private val appointmentRepository = AppointmentRepository(context)
+    fun saveAppointment(appointment: Appointment) {
+        viewModelScope.launch {
+            appointmentRepository.saveAppointment(appointment)
 
-
-    private val _listAppointment = MutableLiveData<MutableList<Appointment>>()
-    val listAppointment: LiveData<MutableList<Appointment>> get() = _listAppointment
-
-    private val _progresState = MutableLiveData(false)
-    val progresState: LiveData<Boolean> = _progresState
-
-
+        }
+    }
 }
