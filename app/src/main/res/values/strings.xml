@@ -7,7 +7,8 @@
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
-
+    <string name="already_signedin">You are now done with login. Move to your real MainActivity</string>
+    <string name="secret_key_name">biometric_sample_encryption_key</string>
     <string name="nombre_mascota">Nombre de la mascota</string>
     <string name="propietario">Nombre del propietario</string>
     <string name="raza">Raza</string>
@@ -16,12 +17,25 @@
     <string name="save_appointment">Guardar Cita</string>
     <string name="description_back_button">Botón para devolverte</string>
     <string name="button_add">Agregar cita nueva</string>
+    <string name="title_activity_enable_biometric_login">Enable BiometricLogin</string>
     <string name="title_home_manager">Administrador \nde citas</string>
     <string name="title_home_dog_app">DogApp</string>
     <string name="button_add2">Agenda cita nueva</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="btn_info_delete">Botón eliminar cita</string>
     <string name="btn_info_edit">Botón editar cita</string>
+
+    <string name="prompt_info_title">Autenticación con Biometría</string>
+    <string name="prompt_info_subtitle">Ingrese su huella digital</string>
+    <string name="prompt_info_use_app_password">CANCEL</string>
+    <string name="desc_biometrics_authorization">Enter your login ID and password to confirm activation of Biometric Login.</string>
+    <string name="username_hint">phone number, email, or username</string>
+    <string name="cancel">Cancel</string>
+    <string name="btn_authorize">Authorize</string>
+    <string name="enable_biometric_login">Enable Biometric Login</string>
+    <string name="password">Password</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
 
     <!-- Strings used for Item Appointment Fragment -->
     <string name="id_appointment">#%d</string>

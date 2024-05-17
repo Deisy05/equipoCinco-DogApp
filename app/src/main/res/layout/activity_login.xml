@@ -3,71 +3,73 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/clContenedor"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="16dp"
-        android:background="@color/black"
         tools:context=".view.LoginActivity">
-
-        <!--
-                <TextView
-                    android:id="@+id/tvTitleLogin"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Login Firebase"
-                    android:textSize="30dp"
-                    android:textStyle="bold"
-                    android:padding="20dp"
-                    android:layout_marginBottom="50dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toTopOf="@+id/tilEmail" />
-        -->
-
-        <ImageView
-            android:id="@+id/LoginImage"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:paddingTop="120dp"
-            android:paddingBottom="20dp"
-            app:layout_constraintBottom_toTopOf="@+id/tilEmail"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0" />
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/tilEmail"
-            style="@style/TextInputLayoutStyle"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:hintEnabled="true"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toTopOf="@+id/tilPass">
+            android:layout_height="match_parent"
+            android:background="#333333"
+            android:padding="16dp"
+            tools:layout_editor_absoluteX="87dp"
+            tools:layout_editor_absoluteY="0dp">
+
+            <!-- Imagen del perro en la parte superior derecha -->
+
+            <ImageView
+                android:id="@+id/LoginImage"
+                android:layout_width="269dp"
+                android:layout_height="391dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="110dp"
+
+                android:layout_marginBottom="324dp"
+                android:src="@drawable/dogg"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- Título "DogApp" -->
 
 
-        </com.google.android.material.textfield.TextInputLayout>
+            <!-- Imagen dinámica de la huella digital en la parte inferior central -->
 
+            <TextView
+                android:id="@+id/tvTitleLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="42dp"
+                android:layout_marginTop="256dp"
+                android:layout_marginEnd="80dp"
+                android:padding="20dp"
+                android:text="@string/app_name"
+                android:textColor="@color/white"
+                android:textSize="60dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
-            android:id="@+id/btnLogin"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Login"
-            android:layout_marginHorizontal="30dp"
-            android:layout_marginTop="50dp"
-            app:layout_constraintTop_toBottomOf="@+id/tilPass"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:backgroundTint="@color/orange"/>
-
-
-
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/animacionHuella"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_below="@+id/tvTitleLogin"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="110dp"
+                android:layout_marginTop="80dp"
+                android:layout_marginEnd="110dp"
+                android:layout_marginBottom="70dp"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true" />
+        </RelativeLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

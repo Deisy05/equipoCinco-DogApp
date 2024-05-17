@@ -18,18 +18,24 @@
         android:theme="@style/Theme.EquipoCinco"
         tools:targetApi="31">
         <activity
-            android:name=".view.LoginActivity"
-            android:exported="false"
-            android:theme="@style/Theme.EquipoCinco" />
+            android:name=".view.fragment.login.EnableBiometricLoginActivity"
+            android:label="@string/title_activity_enable_biometric_login"
+            android:theme="@style/Theme.AppCompat">
+        </activity>
         <activity
-            android:name=".view.MainActivity"
+            android:name=".view.LoginActivity"
             android:exported="true"
-            android:launchMode="singleTop">
+            android:theme="@style/Theme.EquipoCinco" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.MainActivity"
+            android:exported="true"
+            android:launchMode="singleTop">
         </activity>
     </application>
 

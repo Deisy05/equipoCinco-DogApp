@@ -102,4 +102,6 @@ dependencies {
 
     implementation ("androidx.core:core-splashscreen:1.0.1")
 
+    implementation("androidx.biometric:biometric:1.1.0")
+
 }
